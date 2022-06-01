@@ -1,27 +1,27 @@
-import mongoose, { Schema } from 'mongoose';
+import mongoose from 'mongoose';
 
 
-const usersSchema = new Schema(
+const usersSchema = new mongoose.Schema(
     {
         username: {
-            type: string,
+            type: String,
             max: 127,
             min: 1
         },
         email:
         {
-            type: string,
+            type: String,
             max: 255,
             required: true
         },
         password: {
-            type: string,
+            type: String,
             min: 8,
             max: 2047,
             required: true
         },
         admin: {
-            type: boolean,
+            type: Boolean,
             value: true
         },
         created_at: {
